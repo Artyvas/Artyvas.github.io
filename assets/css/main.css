@@ -2601,6 +2601,7 @@ ul.actions {
   cursor: default;
   list-style: none;
   margin-left: -1em;
+  margin-top: 10px;
   padding-left: 0;
 }
 
