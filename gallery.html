@@ -1,0 +1,119 @@
+
+
+<!DOCTYPE html>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Artem Vasilyev</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <img src="images/IMG_1093-2.png" alt="" />
+        <h1>Artem Vasilyev</h1>
+        <p>Web Developer / Alpinist / Photographer</p>
+      </header>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Add event listeners for photo grid items
+          const photoGridItems = document.querySelectorAll(".photo-grid-item");
+          const photoViewer = document.createElement("div");
+          photoViewer.className = "photo-viewer";
+          document.body.appendChild(photoViewer);
+      
+          photoGridItems.forEach(item => {
+            item.addEventListener("click", function () {
+              const imgSrc = item.querySelector("img").src;
+              const img = document.createElement("img");
+              img.src = imgSrc;
+              photoViewer.innerHTML = "";
+              photoViewer.appendChild(img);
+              photoViewer.style.display = "flex";
+            });
+          });
+      
+          photoViewer.addEventListener("click", function () {
+            photoViewer.style.display = "none";
+          });
+          document.querySelector(".photo-grid").style.opacity = "1";
+          window.addEventListener("scroll", function () {
+            if (window.scrollY > 200) {
+              document.querySelector(".page-up").style.display = "block";
+            } else {
+              document.querySelector(".page-up").style.display = "none";
+            }
+          });
+      
+          document.querySelector(".page-up").addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+      
+          document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+          });
+        });
+      </script>
+
+      <!-- Nav -->
+      <nav class="navbar">
+        <a href="index.html" class="navbar-item">About Me</a>
+        <a href="gallery.html" class="navbar-item">Adventure Photography</a>
+        <div class="navbar-item">Web Development Portfolio</div>
+        <div class="navbar-item">Contact Me</div>
+      </nav>
+
+        <!-- First Section -->
+        <section id="first" class="main special">
+            <div class="photo-grid">
+                <!-- Add more images as needed -->
+                <div class="photo-grid-item"> <div class="overlay">
+                    <span class="expand-text">Click to expand</span>
+                  </div><img src="images/DSC00322.jpg" alt="Image 1"></div>
+                <div class="photo-grid-item"> <div class="overlay">
+                    <span class="expand-text">Click to expand</span>
+                  </div><img src="images/DSC00528-4.jpg" alt="Image 2"></div>
+                <div class="photo-grid-item"> <div class="overlay">
+                    <span class="expand-text">Click to expand</span>
+                  </div><img src="images/DSC09428.jpg" alt="Image 3"></div>
+                <div class="photo-grid-item"> <div class="overlay">
+                    <span class="expand-text">Click to expand</span>
+                  </div><img src="images/DSC04796.jpg" alt="Image 4"></div>
+                <div class="photo-grid-item"> <div class="overlay">
+                    <span class="expand-text">Click to expand</span>
+                  </div><img src="images/DSC09202-2.jpg" alt="Image 5"></div>
+                <div class="photo-grid-item"> <div class="overlay">
+                    <span class="expand-text">Click to expand</span>
+                  </div><img src="images/DSC09024.jpg" alt="Image 6"></div>
+              </div>
+              <div class="page-up">&#9650;</div>
+        </section>
+
+        <p class="copyright">
+          &copy; Artem Vasilyev 2023
+          <!-- <a href="https://html5up.net">HTML5 UP</a> -->
+          .
+        </p>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
