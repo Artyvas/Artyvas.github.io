@@ -139,6 +139,7 @@ table {
 
 body {
   -webkit-text-size-adjust: none;
+  font-family: Arial, sans-serif;
 }
 
 mark {
@@ -170,11 +171,54 @@ body {
   -ms-overflow-style: scrollbar;
 }
 
-@media screen and (max-width: 480px) {
-  html,
-  body {
-    min-width: 320px;
+.navbar {
+  display: flex;
+  justify-content: safe center;
+  align-items: center;
+  background-color: #333;
+  position: relative;
+  height: 100px;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  height: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #fff;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70%;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.navbar-item:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
   }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
