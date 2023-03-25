@@ -1,0 +1,54 @@
+/* Reset default margin and padding for header and nav elements */
+header, nav {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set background color and height for header */
+  header {
+    background-color: black;
+    height: 80px; /* Adjust to your liking */
+  }
+  
+  /* Center the logo horizontally and vertically */
+  .logo {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  /* Add padding to the left and right of the logo */
+  .logo img {
+    padding: 10px;
+  }
+  
+  /* Style the navigation menu */
+  nav {
+    display: inline-block;
+    float: right;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 25px 20px; /* Adjust to your liking */
+    font-size: 18px; /* Adjust to your liking */
+    text-align: center;
+  }
+  
+  nav a:hover {
+    background-color: white;
+    color: black;
+  }
